@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="game.css" />
+</head>
+
+<body>
+
+  <!-- ── winner / draw overlay ─────────────────────────────── -->
+  <div class="msg-container hide">
+    <p id="msg">Winner</p>
+    <button id="new-button">New Game</button>
+  </div>
+
+  <main>
+    <h1>Tic Tac Toe</h1>
+
+    <!-- ── mode selector ───────────────────────────────────── -->
+    <div class="mode-panel">
+      <label><input type="radio" name="mode" value="HUMAN" checked /> 2-Player</label>
+      <label><input type="radio" name="mode" value="AI" /> Play vs AI</label>
+    </div>
+
+    <!-- ── whose turn? ─────────────────────────────────────── -->
+    <h2 id="turn-indicator">Turn: O</h2>
+
+    <!-- ── scoreboard ──────────────────────────────────────── -->
+    <div class="scoreboard">
+      <p>🧑 O: <span id="score-o">0</span></p>
+      <p>🤖 X: <span id="score-x">0</span></p>
+      <p>🤝 Draws: <span id="score-draw">0</span></p>
+    </div>
+
+    <!-- ── game grid ───────────────────────────────────────── -->
+    <div class="container">
+      <div class="game">
+        <button class="box"></button><button class="box"></button><button class="box"></button>
+        <button class="box"></button><button class="box"></button><button class="box"></button>
+        <button class="box"></button><button class="box"></button><button class="box"></button>
+      </div>
+    </div>
+
+    <!-- ── reset button ────────────────────────────────────── -->
+    <button id="reset-button">Reset Game</button>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
